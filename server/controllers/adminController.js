@@ -137,7 +137,11 @@ exports.resolveComplaint = async (req, res) => {
     }
 
     const resolutionImagePaths = req.files
+<<<<<<< HEAD
       ? req.files.map(file => `/uploads/complaints/${file.filename}`)
+=======
+      ? req.files.map(file => `/uploads/complaints/${file.filename}`).map(p => p.replace(/\\/g, '/'))
+>>>>>>> d76f4d0 (Initial commit)
       : [];
 
     if (resolutionImagePaths.length === 0) {

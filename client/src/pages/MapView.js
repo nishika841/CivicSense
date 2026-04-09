@@ -8,6 +8,11 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet.heat';
 
+<<<<<<< HEAD
+=======
+const BASE_URL = (process.env.REACT_APP_API_URL || 'http://localhost:5000/api').replace('/api', '');
+
+>>>>>>> d76f4d0 (Initial commit)
 // Fix default marker icon
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -283,7 +288,11 @@ const MapView = () => {
                 <div className="p-1">
                   {complaint.images && complaint.images.length > 0 && (
                     <img
+<<<<<<< HEAD
                       src={`${process.env.REACT_APP_API_URL.replace('/api', '')}${complaint.images[0]}`}
+=======
+                      src={`${BASE_URL}${complaint.images[0]}`}
+>>>>>>> d76f4d0 (Initial commit)
                       alt={complaint.title}
                       className="w-full h-32 object-cover rounded-lg mb-3"
                     />

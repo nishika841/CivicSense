@@ -5,6 +5,12 @@ import { STATUS_COLORS, STATUS_LABELS, getCategoryLabel, getCategoryIcon } from 
 import { format } from 'date-fns';
 
 const ComplaintCard = ({ complaint }) => {
+<<<<<<< HEAD
+=======
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+  const baseUrl = apiUrl.replace('/api', '');
+  
+>>>>>>> d76f4d0 (Initial commit)
   const headerImage =
     (complaint.status === 'Resolved' || complaint.status === 'Confirmed') && complaint.resolutionImages && complaint.resolutionImages.length > 0
       ? complaint.resolutionImages[0]
@@ -20,7 +26,11 @@ const ComplaintCard = ({ complaint }) => {
       {headerImage && (
         <div className="h-48 overflow-hidden bg-gray-100">
           <img
+<<<<<<< HEAD
             src={`${process.env.REACT_APP_API_URL.replace('/api', '')}${headerImage}`}
+=======
+            src={`${baseUrl}${headerImage}`}
+>>>>>>> d76f4d0 (Initial commit)
             alt={complaint.title}
             className="w-full h-full object-cover"
           />

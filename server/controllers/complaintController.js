@@ -24,7 +24,11 @@ exports.createComplaint = async (req, res) => {
 
     const locationAddress = locationData.address || address || 'Unknown location';
 
+<<<<<<< HEAD
     const imagePaths = req.files ? req.files.map(file => `/uploads/complaints/${file.filename}`) : [];
+=======
+    const imagePaths = req.files ? req.files.map(file => `/uploads/complaints/${file.filename}`).map(p => p.replace(/\\/g, '/')) : [];
+>>>>>>> d76f4d0 (Initial commit)
 
     const { data: complaint, error } = await supabase
       .from('complaints')

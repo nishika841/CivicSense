@@ -7,6 +7,11 @@ import { STATUS_COLORS, STATUS_LABELS, getCategoryLabel } from '../utils/constan
 import { format } from 'date-fns';
 import BlockchainTxModal from '../components/BlockchainTxModal';
 
+<<<<<<< HEAD
+=======
+const BASE_URL = (process.env.REACT_APP_API_URL || 'http://localhost:5000/api').replace('/api', '');
+
+>>>>>>> d76f4d0 (Initial commit)
 const BeforeAfterSlider = ({ beforeSrc, afterSrc }) => {
   const containerRef = useRef(null);
   const [sliderPos, setSliderPos] = useState(50);
@@ -239,7 +244,11 @@ const ComplaintDetail = () => {
                 {complaint.images.map((image, index) => (
                   <div key={index} className="relative">
                     <img
+<<<<<<< HEAD
                       src={`${process.env.REACT_APP_API_URL.replace('/api', '')}${image}`}
+=======
+                      src={`${BASE_URL}${image}`}
+>>>>>>> d76f4d0 (Initial commit)
                       alt={`Issue ${index + 1}`}
                       className="w-full h-64 object-cover rounded-lg"
                     />
@@ -279,7 +288,11 @@ const ComplaintDetail = () => {
                     {complaint.resolutionImages.map((image, index) => (
                       <div key={index} className="relative">
                         <img
+<<<<<<< HEAD
                           src={`${process.env.REACT_APP_API_URL.replace('/api', '')}${image}`}
+=======
+                          src={`${BASE_URL}${image}`}
+>>>>>>> d76f4d0 (Initial commit)
                           alt={`Resolution ${index + 1}`}
                           className="w-full h-64 object-cover rounded-lg border-2 border-green-300"
                         />
@@ -349,7 +362,11 @@ const ComplaintDetail = () => {
                   {complaint.resolutionImages.map((image, index) => (
                     <div key={index} className="relative">
                       <img
+<<<<<<< HEAD
                         src={`${process.env.REACT_APP_API_URL.replace('/api', '')}${image}`}
+=======
+                        src={`${BASE_URL}${image}`}
+>>>>>>> d76f4d0 (Initial commit)
                         alt={`Resolution ${index + 1}`}
                         className="w-full h-64 object-cover rounded-lg border-2 border-blue-300"
                       />
@@ -497,8 +514,13 @@ const ComplaintDetail = () => {
                       {complaint.images && complaint.images.length > 0 ? (
                         <>
                           <BeforeAfterSlider
+<<<<<<< HEAD
                             beforeSrc={`${process.env.REACT_APP_API_URL.replace('/api', '')}${complaint.images[0]}`}
                             afterSrc={`${process.env.REACT_APP_API_URL.replace('/api', '')}${complaint.resolutionImages[0]}`}
+=======
+                            beforeSrc={`${BASE_URL}${complaint.images[0]}`}
+                            afterSrc={`${BASE_URL}${complaint.resolutionImages[0]}`}
+>>>>>>> d76f4d0 (Initial commit)
                           />
 
                           {/* Extra resolution images */}
@@ -507,7 +529,11 @@ const ComplaintDetail = () => {
                               {complaint.resolutionImages.slice(1).map((image, index) => (
                                 <img
                                   key={index}
+<<<<<<< HEAD
                                   src={`${process.env.REACT_APP_API_URL.replace('/api', '')}${image}`}
+=======
+                                  src={`${BASE_URL}${image}`}
+>>>>>>> d76f4d0 (Initial commit)
                                   alt={`Resolution ${index + 2}`}
                                   className="w-full h-48 object-cover rounded-lg border-2 border-green-200"
                                 />
@@ -521,7 +547,11 @@ const ComplaintDetail = () => {
                             <div key={index} className="relative">
                               <img
                                 key={index}
+<<<<<<< HEAD
                                 src={`${process.env.REACT_APP_API_URL.replace('/api', '')}${image}`}
+=======
+                                src={`${BASE_URL}${image}`}
+>>>>>>> d76f4d0 (Initial commit)
                                 alt={`Resolution ${index + 1}`}
                                 className="w-full h-64 object-cover rounded-lg border-2 border-green-200"
                               />
