@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.mapboxgl-popup-content {
+  padding: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.mapboxgl-popup-close-button {
+  font-size: 20px !important;
+  padding: 8px !important;
+}
+
+/* Dark mode overrides for common elements */
+.dark .bg-white {
+  background-color: #1f2937 !important;
+}
+
+.dark .bg-gray-50 {
+  background-color: #111827 !important;
+}
+
+.dark .text-gray-900 {
+  color: #f3f4f6 !important;
+}
+
+.dark .text-gray-700 {
+  color: #d1d5db !important;
+}
+
+.dark .text-gray-600 {
+  color: #9ca3af !important;
+}
+
+.dark .text-gray-500 {
+  color: #9ca3af !important;
+}
+
+.dark .border-gray-200 {
+  border-color: #374151 !important;
+}
+
+.dark .border-gray-300 {
+  border-color: #4b5563 !important;
+}
+
+.dark .shadow-soft {
+  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.3), 0 10px 20px -2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #374151 !important;
+  color: #f3f4f6 !important;
+  border-color: #4b5563 !important;
+}
+
+.dark .hover\:bg-gray-100:hover {
+  background-color: #374151 !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: #374151 !important;
+}
+
+/* Logo: remove white background in both modes */
+.app-logo {
+  mix-blend-mode: multiply;
+}
+
+.dark .app-logo {
+  mix-blend-mode: screen;
+  filter: brightness(1.1);
+}
