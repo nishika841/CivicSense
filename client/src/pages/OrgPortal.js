@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { orgAPI } from '../utils/api';
 
@@ -23,9 +23,7 @@ const OrgPortal = () => {
   const [error, setError] = useState('');
   const [actionLoading, setActionLoading] = useState(null);
 
-  const fetchAssignments = async () => {
-    setLoading(true);
-    setError('');
+  const fetchAssignments = useCallback(async () => {
     try {
       const res = await orgAPI.listAssignments({ limit: 50 });
       setAssignments(res.data.assignments || []);
@@ -34,12 +32,11 @@ const OrgPortal = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
     fetchAssignments();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [fetchAssignments]);
 
   const doAction = async (id, action) => {
     setActionLoading(`${id}:${action}`);
