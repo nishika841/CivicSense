@@ -309,3 +309,5 @@ MIT License — see [LICENSE](LICENSE)
 <div align="center">
   <b>Built for transparent governance</b>
 </div>
+#   D e p l o y m e n t   t r i g g e r  
+ 
